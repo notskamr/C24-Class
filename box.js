@@ -1,3 +1,4 @@
+
 class Box {
   constructor(x, y, width, height) {
     var options = {
@@ -18,8 +19,10 @@ class Box {
     translate(pos.x, pos.y);
     rotate(angle);
     rectMode(CENTER);
-    fill(255);
+    strokeWeight(4);
+    stroke("aquamarine")
+    fill(100)
     rect(0, 0, this.width, this.height);
     pop();
   }
-};
+}
