@@ -1,13 +1,15 @@
-class pig {
-    constructor(x, y) {
+
+class log {
+    constructor(x, y, height, angle) {
       var options = {
-          'restitution':0.8,
-          'friction':0.3,
+          'restitution':0.2,
+          'friction':50,
           'density':1.0
       }
-      this.body = Bodies.rectangle(x, y, 50, 50, options);
-      this.width = 50;
-      this.height = 50;
+      this.body = Bodies.rectangle(x, y, 20, height, options);
+      this.width = 10;
+      this.height = height;
+     Matter.Body.setAngle(this.body, angle)
       
       World.add(world, this.body);
     }
@@ -19,10 +21,8 @@ class pig {
       rotate(angle);
       rectMode(CENTER);
       
-      
-      fill('#007f54')
+      fill('brown')
       rect(0, 0, this.width, this.height);
       pop();
     }
   }
-  
